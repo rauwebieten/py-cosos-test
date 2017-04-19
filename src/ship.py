@@ -8,11 +8,10 @@ class Ship(Sprite):
 
         self.scale = 0.25
 
-        self.rotation = 0
-        self.position = (100, 100)
-        self.velocity = (0, 0)
-        self.acceleration = (0, 0)
-        self.gravity = 0
+        self.x = 200
+        self.y = 200
+        self.rotation = 180
+        self.speed = 100
 
         self.move = src.movements.MoveShip()
 

@@ -1,13 +1,19 @@
-from cocos.actions import Move
+from cocos.actions import Action
+import math
+from pyglet.window import key
+import pyglet
 
+import cocos.actions.move_actions
 
-class MoveShip(Move):
-
+class MoveShip(Action):
     def step(self, dt):
         super(MoveShip, self).step(dt)
 
-        velocity_x = 100 * 1
-        velocity_y = 100 * 0
+        self.target.rotation += 2
 
-        # Set the object's velocity.
-        self.target.velocity = (velocity_x, velocity_y)
+        rads = math.radians(self.target.rotation)
+        vx = math.sin(rads) * self.target.speed
+        vy = math.cos(rads) * self.target.speed
+
+        self.target.x += vx * dt
+        self.target.y += vy * dt
