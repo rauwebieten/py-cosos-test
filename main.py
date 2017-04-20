@@ -3,7 +3,6 @@ from cocos.layer import Layer
 from cocos.director import director
 import src.ship
 
-
 class Game(Layer):
     def __init__(self):
         super(Game, self).__init__()
