@@ -1,6 +1,7 @@
 from cocos.sprite import Sprite
+from cocos.director import director
 import src.movements
-
+from pyglet.window import key
 
 class Ship(Sprite):
     def __init__(self):
